@@ -388,3 +388,83 @@ h1 {
 .step {
   cursor: pointer;
 }
+
+
+/*rodape
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  background: linear-gradient(135deg, #1b1b1b, #0f0f0f);
+  color: #eaeaea;
+  font-size: 0.95rem;
+}
+
+.footer-top {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-col h3 {
+  color: #b30f0f;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+.footer-col p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: #d0d0d0;
+}
+
+.footer-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 22px;
+  background: #b30f0f;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.footer-btn:hover {
+  background: #8f0c0c;
+}
+
+/* MAPA */
+.footer-map iframe {
+  width: 100%;
+  height: 260px;
+  border: none;
+  border-radius: 12px;
+}
+
+/* FAIXA INFERIOR */
+.footer-bottom {
+  background: #7a0d0d;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 0.85rem;
+  color: #f1f1f1;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
