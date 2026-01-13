@@ -344,6 +344,23 @@ h1 {
 ========================= */
 @media (max-width: 768px) {
 
+
+   .hero {
+    
+  
+    position: relative; /* essencial */ 
+    min-height: 40vh;
+    
+    padding: 0; /* não empurra o header */
+  }
+
+
+  .case {
+    top: 0px; /* desce no mobile */
+  }
+
+ 
+
   .section-title {
     font-size: 1.9rem;
   }
