@@ -12,7 +12,7 @@
    BODY
 ========================= */
 body {
-  background: linear-gradient(135deg, #42110F 0%, #2b0a08 100%);
+  background: linear-gradient(135deg, #c2b4b4 0%, #2b0a08 100%);
   color: #FAF1EE;
   line-height: 1.6;
   overflow-x: hidden;
@@ -342,14 +342,35 @@ h1 {
 /* =========================
    RESPONSIVO
 ========================= */
+
+@media (max-width: 360px) {
+
+   .hero {
+    position: relative;
+    min-height: 340vh;     /* chave do ajuste */
+   min-height: 20vh;
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 20;
+   
+  }
+
+  .case {
+    margin-top: 0%;
+    top: 100px; /* ajuste fino só iPhone */
+  }
+}
+
 @media (max-width: 768px) {
 
 
+
    .hero {
-    
-  
     position: relative; /* essencial */ 
-    min-height: 40vh;
+    min-height: 60vh;
+   
+
     
     padding: 0; /* não empurra o header */
   }
