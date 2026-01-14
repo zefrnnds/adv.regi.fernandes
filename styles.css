@@ -12,8 +12,8 @@
    BODY
 ========================= */
 body {
-  background: linear-gradient(135deg, #c2b4b4 0%, #2b0a08 100%);
-  color: #faf1ee;
+  background: none;
+  color: none;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -68,7 +68,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(66, 17, 15, 0.75);
+ 
   z-index: 1;
 }
 
@@ -89,7 +89,7 @@ body {
 h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #c19b86;
+  color: #bd937d;
 }
 
 .subtitle {
@@ -329,12 +329,16 @@ h1 {
     background-repeat: no-repeat;
     padding: 0;
   }
-
+.section{
+  margin-top: -18vh;
+}
   .case {
+   
     top: 0px;
   }
 
   h1 {
+  
     font-size: 2rem;
   }
 
@@ -449,8 +453,7 @@ h1 {
   background: #8f0c0c;
 }
 
-color: #f1f1f1;
-}
+
 /* MAPA */
 .footer-map iframe {
   width: 100%;
@@ -467,6 +470,5 @@ color: #f1f1f1;
   font-size: 0.85rem;
   color: #f1f1f1;
 }
-
 
 
