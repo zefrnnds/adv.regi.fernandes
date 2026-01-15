@@ -12,8 +12,8 @@
    BODY
 ========================= */
 body {
-  background: none;
-  color: none;
+  background: linear-gradient(135deg, #c2b4b4 0%, #2b0a08 100%);
+  color: #faf1ee;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -68,7 +68,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #bd937;
+  background: rgba(66, 17, 15, 0.75);
   z-index: 1;
 }
 
@@ -89,7 +89,7 @@ body {
 h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #bd937d;
+  color: #c19b86;
 }
 
 .subtitle {
@@ -466,5 +466,6 @@ h1 {
   font-size: 0.85rem;
   color: #f1f1f1;
 }
+
 
 
