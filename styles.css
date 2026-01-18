@@ -21,7 +21,7 @@ body {
    HEADER (LOGO SOBRE O BANNER)
 ========================= */
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -32,8 +32,8 @@ body {
   justify-content: center;
 
   z-index: 100;
-  background: rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(4px);
+  background: none';
+  backdrop-filter: blur(10px);
 }
 
 .logo {
@@ -343,40 +343,75 @@ h1 {
 /* =========================
    RESPONSIVO (MOBILE)
 ========================= */
+@media (max-width: 360px) {
+ 
+
+  .case {
+    margin-top: 0%;
+ 
+  }
+}
+
 @media (max-width: 768px) {
 
-  .hero {
-    min-height: 100vh;
-    padding-top: 120px;
-  }
-
-  /* CASE NÃO SOBREPÕE NO MOBILE */
-  .case {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    margin: 24px 16px 0;
-    z-index: 1;
-  }
-
-  .contact-area {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
 
   .section-title {
     font-size: 1.9rem;
   }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .step {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .step-number {
+    margin-bottom: 10px;
+  }
+
+  .step-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .step-content p {
+    font-size: 0.95rem;
+  }
+
+
+
+  .footer-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-.footer-title {
-  color: #b30000;     /* vermelho jurídico */
-  margin-bottom: 20px;
-  font-weight: 600;
+/* ESCONDE */
+.step-content p {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
+/* MOSTRA AO CLICAR / FOCO */
+.step:focus-within .step-content p,
+.step:hover .step-content p {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 8px;
+}
+
+/* PERMITE FOCO */
+.step {
+  cursor: pointer;
+}
