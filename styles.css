@@ -268,7 +268,7 @@ h1 {
 ========================= */
 .contact-area {
   flex-direction: column;
-  display: flex;
+  display: relative;
   gap: 40px;
   margin-top: 30px;
   flex-wrap: wrap;
@@ -309,8 +309,12 @@ h1 {
 .contact-line .icon {
   font-size: 1.4rem;
 }
-
-
+.footer-title{
+  text-align: center;
+  background: #7a0d0d;
+  padding: 5px 14px;
+  border-radius: 50px;
+}
 .footer-bottom {
   background: #7a0d0d;
   padding: 14px 20px;
@@ -330,7 +334,7 @@ h1 {
 
 /* Instagram à direita */
 .footer-instagram {
-  color: #ffffff;
+  color: #eeebeb;
   font-size: 1.2rem;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -341,42 +345,60 @@ h1 {
 }
 
 /* =========================
-   RESPONSIVO (MOBILE)
+   RESPONSIVO (TABLET E MOBILE)
 ========================= */
-@media (max-width: 360px) {
- 
-
-  .case {
-    margin-top: 0%;
- 
-  }
-}
-
 @media (max-width: 768px) {
 
+  /* FOOTER */
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+    padding-bottom: 40px;
+  }
 
+  /* ÁREA DE CONTATO + ATUAÇÃO */
+  .contact-area {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+
+  /* ENTRE EM CONTATO — PRIMEIRO */
+  .contact-icons {
+    order: 1;
+    align-items: center;
+  }
+
+  /* ÁREAS DE ATUAÇÃO — DEBAIXO */
+  .atuacao {
+    order: 2;
+    align-items: center;
+    text-align: center;
+  }
+
+  .atuacao ul {
+    padding: 0;
+  }
+
+  /* FOOTER BOTTOM */
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  /* TÍTULOS */
   .section-title {
     font-size: 1.9rem;
   }
 
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 100%;
-    max-width: 320px;
-  }
-
+  /* STEPS */
   .step {
-    flex-direction: column;
     text-align: center;
-    align-items: center;
-  }
-
-  .step-number {
-    margin-bottom: 10px;
   }
 
   .step-content h3 {
@@ -386,32 +408,19 @@ h1 {
   .step-content p {
     font-size: 0.95rem;
   }
+}
 
+/* =========================
+   MOBILE PEQUENO
+========================= */
+@media (max-width: 360px) {
 
-
-  .footer-btn {
-    margin-left: auto;
-    margin-right: auto;
+  .footer-top {
+    padding: 40px 16px;
   }
-}
 
-/* ESCONDE */
-.step-content p {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-/* MOSTRA AO CLICAR / FOCO */
-.step:focus-within .step-content p,
-.step:hover .step-content p {
-  max-height: 200px;
-  opacity: 1;
-  margin-top: 8px;
-}
-
-/* PERMITE FOCO */
-.step {
-  cursor: pointer;
+  .footer-bottom {
+    font-size: 0.8rem;
+    padding: 16px;
+  }
 }
