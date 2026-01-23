@@ -17,6 +17,7 @@ body {
   background: #faf1ee;
 }
 
+
 /* =========================
    HEADER (LOGO SOBRE O BANNER)
 ========================= */
@@ -80,6 +81,14 @@ body {
   padding: 40px 20px;
 }
 
+
+.atend1{
+   font-size: 0.8rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  padding: 5vh;
+}
+
 /* =========================
    TEXTOS HERO
 ========================= */
@@ -112,7 +121,7 @@ h1 {
 ========================= */
 .btn {
   display: inline-block;
-  background: #27ae60;
+  background: #0ED50E;
   color: #ffffff;
   padding: 14px 32px;
   border-radius: 30px;
@@ -142,7 +151,7 @@ h1 {
    SECTIONS
 ========================= */
 .section {
-  padding: 60px 20px 80px;
+  padding: 10px 15px 20px;
   text-align: center;
   background: #faf1ee;
   color: #42110f;
@@ -215,7 +224,7 @@ h1 {
   right: 20px;
   width: 60px;
   height: 60px;
-  background: #25d366;
+  background: #0ED50E;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -293,6 +302,7 @@ h1 {
 
 /* CONTATOS */
 .contact-icons {
+  font-family: sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -307,37 +317,46 @@ h1 {
 }
 
 .contact-line .icon {
+  font-family: sans-serif;
   font-size: 1.4rem;
 }
-.footer-title{
+
+.footer-title {
   text-align: center;
   background: #7a0d0d;
   padding: 5px 14px;
   border-radius: 50px;
 }
-.footer-bottom {
-  background: #7a0d0d;
-  padding: 14px 20px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
-  font-size: 0.9rem;
-  color: #ffffff;
-}
 
 /* Texto à esquerda */
 .footer-text {
+  align-items: center;
+  font-family: sans-serif;
   font-weight: 500;
 }
 
 /* Instagram à direita */
 .footer-instagram {
+  font-family: sans-serif;
   color: #eeebeb;
   font-size: 1.2rem;
+  text-decoration: none; /* remove sublinhado */
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+/* garante que mesmo sendo <a> não sublinhe */
+.footer-instagram:visited,
+.footer-instagram:hover,
+.footer-instagram:active {
+  text-decoration: none;
+  color: #eeebeb;
+}
+/* remove sublinhado global de links */
+a {
+  text-decoration: none;
+  font-family: sans-serif;}
 
 .footer-instagram:hover {
   opacity: 0.8;
