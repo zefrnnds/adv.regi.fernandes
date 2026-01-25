@@ -190,8 +190,8 @@ h1 {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   background: #27ae60;
   border-radius: 50%;
   display: flex;
@@ -297,4 +297,5 @@ h1 {
     gap: 32px;
   }
 }
+
 
