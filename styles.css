@@ -57,7 +57,7 @@ a {
   justify-content: center;
   min-height: 100vh;
   padding: 120px 20px 40px;
-  background: #b30f0f url("img/banner.png") center/cover no-repeat;
+  background: #b30f0f url("img/banner1.png") center/cover no-repeat;
   text-align: center;
 }
 
@@ -297,3 +297,4 @@ h1 {
     gap: 32px;
   }
 }
+
