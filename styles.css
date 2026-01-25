@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Verdana, sans-serif;
 }
 
 /* =========================
@@ -17,9 +17,17 @@ body {
   background: #faf1ee;
 }
 
+/* =========================
+   LINKS (SEM SUBLINHADO)
+========================= */
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
 
 /* =========================
-   HEADER (LOGO SOBRE O BANNER)
+   HEADER
 ========================= */
 .header {
   position: absolute;
@@ -27,13 +35,10 @@ body {
   left: 0;
   width: 100%;
   height: 80px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   z-index: 100;
-  background: none';
   backdrop-filter: blur(10px);
 }
 
@@ -43,37 +48,27 @@ body {
 }
 
 /* =========================
-   HERO / BANNER
+   HERO
 ========================= */
 .hero {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-
   min-height: 100vh;
-  width: 100%;
-
   padding: 120px 20px 40px;
-
-  background-image: url("img/banner.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
+  background: #b30f0f url("img/banner.png") center/cover no-repeat;
   text-align: center;
 }
 
-/* OVERLAY */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.25);
+  background: rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
 
-/* CONTEÚDO HERO */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -81,12 +76,10 @@ body {
   padding: 40px 20px;
 }
 
-
-.atend1{
-   font-size: 0.8rem;
+.atend1 {
+  font-size: 0.8rem;
   margin-bottom: 20px;
   color: #ffffff;
-  padding: 5vh;
 }
 
 /* =========================
@@ -102,7 +95,6 @@ h1 {
   font-size: 1.15rem;
   color: #f5e4dc;
   font-weight: 700;
-  letter-spacing: 0.6px;
   margin-bottom: 14px;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
 }
@@ -112,22 +104,20 @@ h1 {
   color: #faf1ee;
   margin-bottom: 25px;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 
 /* =========================
-   BOTÕES
+   BOTÃO
 ========================= */
 .btn {
   display: inline-block;
-  background: #0ED50E;
+  background: #27ae60;
   color: #ffffff;
   padding: 14px 32px;
   border-radius: 30px;
-  text-decoration: none;
   font-weight: bold;
-  transition: all 0.3s ease;
+  transition: 0.3s;
   box-shadow: 0 4px 8px rgba(39, 174, 96, 0.3);
 }
 
@@ -137,21 +127,10 @@ h1 {
 }
 
 /* =========================
-   CASE (SOBREPOSTO NO DESKTOP)
-========================= */
-.case {
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-}
-
-/* =========================
    SECTIONS
 ========================= */
 .section {
-  padding: 10px 15px 20px;
+  padding: 20px 15px;
   text-align: center;
   background: #faf1ee;
   color: #42110f;
@@ -160,11 +139,10 @@ h1 {
 .section-title {
   font-size: 2.3rem;
   margin-bottom: 50px;
-  font-weight: 600;
 }
 
 /* =========================
-   STEPS / ÁREAS
+   STEPS
 ========================= */
 .steps {
   max-width: 900px;
@@ -177,46 +155,36 @@ h1 {
 .step {
   background: #42110f;
   border-radius: 14px;
-  padding: 28px 26px;
+  padding: 28px;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
-  cursor: pointer;
+  transition: transform 0.3s;
 }
 
 .step:hover {
   transform: translateY(-4px);
 }
 
-.step-content {
-  text-align: center;
-}
-
 .step-content h3 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
   color: #c19b86;
+  margin-bottom: 8px;
 }
 
-/* TEXTO OCULTO */
 .step-content p {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: 0.3s;
   color: #faf1ee;
-  font-size: 1rem;
 }
 
-/* MOSTRA AO HOVER / TOQUE */
-.step:hover .step-content p,
-.step:focus-within .step-content p {
+.step:hover p {
   max-height: 300px;
   opacity: 1;
   margin-top: 8px;
 }
 
 /* =========================
-   WHATSAPP FLOAT
+   WHATSAPP
 ========================= */
 .whatsapp-float {
   position: fixed;
@@ -224,18 +192,12 @@ h1 {
   right: 20px;
   width: 60px;
   height: 60px;
-  background: #0ED50E;
+  background: #27ae60;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   z-index: 200;
-}
-
-.whatsapp-float img {
-  width: 30px;
-  height: 30px;
 }
 
 /* =========================
@@ -255,16 +217,69 @@ h1 {
   gap: 40px;
 }
 
-.footer-col h3 {
-  color: #b30f0f;
+/* títulos */
+.footer-title {
+  background: #7a0d0d;
+  padding: 6px 18px;
+  border-radius: 50px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
-.footer-col p {
-  margin-bottom: 12px;
-  color: #d0d0d0;
+/* colunas */
+.footer-left,
+.footer-right {
+  text-align: center;
 }
 
+/* =========================
+   CONTATO
+========================= */
+.contact-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+/* Instagram sem cara de link */
+.footer-instagram {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #eeebeb;
+  transition: 0.3s;
+}
+
+.footer-instagram:visited,
+.footer-instagram:active,
+.footer-instagram:focus {
+  color: #eeebeb;
+  outline: none;
+}
+
+.footer-instagram:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+/* =========================
+   ATUAÇÃO
+========================= */
+.footer-right ul {
+  list-style: none;
+}
+
+.footer-right li {
+  margin-bottom: 6px;
+}
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
 .footer-bottom {
   background: #7a0d0d;
   text-align: center;
@@ -273,173 +288,12 @@ h1 {
 }
 
 /* =========================
-   CONTATOS + ATUAÇÃO
-========================= */
-.contact-area {
-  flex-direction: column;
-  display: relative;
-  gap: 40px;
-  margin-top: 30px;
-  flex-wrap: wrap;
-}
-
-/* ATUAÇÃO */
-.atuacao h4 {
-  color: #cf0909;
-  font-size: 1.2rem;
-  margin-bottom: 12px;
-}
-
-.atuacao ul {
-  list-style: none;
-}
-
-.atuacao li {
-  color: #ffffff;
-  font-size: 0.95rem;
-  margin-bottom: 6px;
-}
-
-/* CONTATOS */
-.contact-icons {
-  font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-line {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 14px;
-  font-size: 0.95rem;
-  color: #ffffff;
-}
-
-.contact-line .icon {
-  font-family: sans-serif;
-  font-size: 1.4rem;
-}
-
-.footer-title {
-  text-align: center;
-  background: #7a0d0d;
-  padding: 5px 14px;
-  border-radius: 50px;
-}
-
-
-
-/* Texto à esquerda */
-.footer-text {
-  align-items: center;
-  font-family: sans-serif;
-  font-weight: 500;
-}
-
-/* Instagram à direita */
-.footer-instagram {
-  font-family: sans-serif;
-  color: #eeebeb;
-  font-size: 1.2rem;
-  text-decoration: none; /* remove sublinhado */
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-/* garante que mesmo sendo <a> não sublinhe */
-.footer-instagram:visited,
-.footer-instagram:hover,
-.footer-instagram:active {
-  text-decoration: none;
-  color: #eeebeb;
-}
-/* remove sublinhado global de links */
-a {
-  text-decoration: none;
-  font-family: sans-serif;}
-
-.footer-instagram:hover {
-  opacity: 0.8;
-  transform: scale(1.1);
-}
-
-/* =========================
-   RESPONSIVO (TABLET E MOBILE)
+   RESPONSIVO
 ========================= */
 @media (max-width: 768px) {
-
-  /* FOOTER */
   .footer-top {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
     gap: 32px;
-    padding-bottom: 40px;
-  }
-
-  /* ÁREA DE CONTATO + ATUAÇÃO */
-  .contact-area {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    align-items: center;
-  }
-
-  /* ENTRE EM CONTATO — PRIMEIRO */
-  .contact-icons {
-    order: 1;
-    align-items: center;
-  }
-
-  /* ÁREAS DE ATUAÇÃO — DEBAIXO */
-  .atuacao {
-    order: 2;
-    align-items: center;
-    text-align: center;
-  }
-
-  .atuacao ul {
-    padding: 0;
-  }
-
-  /* FOOTER BOTTOM */
-  .footer-bottom {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-
-  /* TÍTULOS */
-  .section-title {
-    font-size: 1.9rem;
-  }
-
-  /* STEPS */
-  .step {
-    text-align: center;
-  }
-
-  .step-content h3 {
-    font-size: 1.1rem;
-  }
-
-  .step-content p {
-    font-size: 0.95rem;
-  }
-}
-
-/* =========================
-   MOBILE PEQUENO
-========================= */
-@media (max-width: 360px) {
-
-  .footer-top {
-    padding: 40px 16px;
-  }
-
-  .footer-bottom {
-    font-size: 0.8rem;
-    padding: 16px;
   }
 }
